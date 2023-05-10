@@ -13,29 +13,33 @@
     </div>
 </template>
 
-  <script lang="ts">
-  export default {
-    name: 'ReposPage',
-  };
-  </script>
-  
-  <script setup lang="ts">
-  import { ref, onMounted } from 'vue';
-  import axios from 'axios';
-  
-  const repositories = ref([]);
-  
-  onMounted(() => {
-    axios
-      .get('http://localhost:3000/repos')
-      .then(response => {
-        repositories.value = response.data;
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  });
-  </script>
-  
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style scoped></style>
+<script lang="ts">
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+
+export default {
+  name: 'ReposPage',
+  setup() {
+    const repositories = ref([]);
+
+    const fetchRepositories = () => {
+      axios
+        .get('http://localhost:3000/repos')
+        .then(response => {
+          repositories.value = response.data;
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    };
+
+    onMounted(fetchRepositories);
+
+    return {
+      repositories,
+    };
+  },
+};
+</script>
+
+<style scoped></style>
