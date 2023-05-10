@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const yaml = require('js-yaml');
+const cors = require('cors');
+
+app.use(cors()); 
 
 // Read and parse the YAML file
 try {
