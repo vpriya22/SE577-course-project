@@ -1,0 +1,41 @@
+repositories:
+  - id: 1
+    name: repository1
+    url: https://github.com/username/repository1
+    last_update: 05-03-2023
+    description: A sample repository for demonstration purposes.
+  - id: 2
+    name: repository2
+    url: https://github.com/username/repository2
+    last_update: 05-03-2023
+    description: Another repository with some interesting features.
+  - id: 3
+    name: repository3
+    url: https://github.com/username/repository3
+    last_update: 05-03-2023
+    description: A repository for testing and experimentation.
+  - id: 4
+    name: repository4
+    url: https://github.com/username/repository4
+    last_update: 05-03-2023
+    description: A repository for a specific project.
+  - id: 5
+    name: repository5
+    url: https://github.com/username/repository5
+    last_update: 05-03-2023
+    description: A repository containing useful utilities.
+  - id: 6
+    name: repository6
+    url: https://github.com/username/repository6
+    last_update: 05-03-2023
+    description: A repository for collaborative development.
+  - id: 7
+    name: repository7
+    url: https://github.com/username/repository7
+    last_update: 05-03-2023
+    description: A repository for data analysis.
+  - id: 8
+    name: repository8
+    url: https://github.com/username/repository8
+    last_update: 05-03-2023
+    description: A repository for machine learning projects.
