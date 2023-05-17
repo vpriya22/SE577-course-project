@@ -12,3 +12,4 @@ yarn dev
 The server will be hosted at `http://localhost:3000`
 -   To view all repositories: `http://localhost:3000/repos`
 -   To view a specific repository: `http://localhost:3000/repos?id=1`
+-   To check GitHub API integration: `http://localhost:3000/ghsecure/users`

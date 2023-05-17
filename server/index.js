@@ -3,6 +3,25 @@ const app = express();
 const fs = require('fs');
 const yaml = require('js-yaml');
 const cors = require('cors');
+const dotenv = require('dotenv');
+
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+const { getGHProxySecureOptions, getGHProxyOptions } = require('./proxy');
+
+// Rest of your code...
+
+dotenv.config();
+
+const GHAccessToken = process.env.GH_ACCESS_TOKEN;
+
+// Proxy route for secure requests
+const proxyOptsSecure = getGHProxySecureOptions(GHAccessToken);
+app.use('/ghsecure', createProxyMiddleware(proxyOptsSecure));
+
+// Proxy route for regular requests
+const proxyOpts = getGHProxyOptions();
+app.use('/ghproxy', createProxyMiddleware(proxyOpts));
 
 app.use(cors()); 
 
