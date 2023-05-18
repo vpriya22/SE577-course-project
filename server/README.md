@@ -4,8 +4,14 @@
 ```
 yarn install
 ```
-2. Start the server
+2. Create a .env file and add the GitHub Access Token 
+```
+touch .env
 
+echo "GH_ACCESS_TOKEN=xxxx" >> .env
+```
+
+3. Start the server
 ```
 yarn dev
 ```  
