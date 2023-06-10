@@ -1,23 +1,30 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AboutMePage from '../pages/AboutMePage.vue'
+import HomePage from '../pages/HomePage.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
+      name: 'home',
+      component: HomePage
+    },
+    {
+      path: '/aboutme',
       name: 'aboutme',
       component: AboutMePage
     },
     {
-      path: '/p1',
-      name: 'repospage',
-      component: () => import('../pages/ReposPage.vue')
+      path: '/github-repos',
+      name: 'githubrepospage',
+      component: () => import('../pages/GithubReposPage.vue')
     },
     {
-      path: '/p2',
-      name: 'repodetailspage',
-      component: () => import('../pages/RepoDetailsPage.vue')
+      path: '/db-repos',
+      name: 'dbrepospage',
+      component: () => import('../pages/DbReposPage.vue')
     },
     {
       path: '/login',

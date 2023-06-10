@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-//import RouterLink  from 'vue-router'
-import FirstPage from './pages/ReposPage.vue'
-import SecondPage from './pages/RepoDetailsPage.vue'
-import ThirdPage from './pages/LoginPage.vue'
 
 </script>
 
@@ -12,9 +8,11 @@ import ThirdPage from './pages/LoginPage.vue'
   <header>
     <nav > 
         <RouterLink to="/login" class="login-link">Login</RouterLink>
-        <RouterLink to="/">About Me</RouterLink>
-        <RouterLink to="/p1">My Repositories</RouterLink>
-        <RouterLink to="/p2">Repository Details</RouterLink>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/aboutme">About Me</RouterLink>
+        <RouterLink to="/github-repos">My GitHub Repositories</RouterLink>
+        <RouterLink to="/db-repos">My DB Repositories</RouterLink>
+
     </nav>
     <hr/>
   </header>
