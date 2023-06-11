@@ -35,7 +35,7 @@
 <script lang="ts">
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
-import type { RepoGithubInterface, CommitGithubInterface } from './ApiInterface';
+import type { RepoGithubInterface} from './ApiInterface';
 
 export default {
   name: 'GithubReposPage',

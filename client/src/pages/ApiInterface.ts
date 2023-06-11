@@ -17,10 +17,9 @@ export interface RepoDbInterface{
     description: string;
     url: string;
 }
-
 export interface GistGithubInterface {
+    id: string;
+    html_url: string;
     description: string;
-    files: string,
-    url: string
-    language: string;
-}
+  }
+  
